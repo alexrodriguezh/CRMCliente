@@ -5,8 +5,8 @@ import { setContext } from 'apollo-link-context'
 // Aqui le decimos a donde se conecte
 const httpLink = createHttpLink({
     
-    uri: 'http://localhost:4000/',
-    // uri: 'https://dry-beach-97396.herokuapp.com/',
+    // uri: 'http://localhost:4000/',
+    uri: 'https://dry-beach-97396.herokuapp.com/',
     fetch
 })
 
