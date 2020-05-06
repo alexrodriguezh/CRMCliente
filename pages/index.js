@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Layout from '../components/Layout'
 import Cliente from '../components/Cliente'
 import { gql, useQuery } from '@apollo/client'

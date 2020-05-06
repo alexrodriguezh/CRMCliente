@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useRouter } from 'next/router'
+import client from '../config/apollo'
 
 const OBTENER_USUARIO = gql`
     query obtenerUsuario{
@@ -31,12 +32,16 @@ const Header = () => {
         return router.push('/login')
     }
 
+    // if(!data || data && !data.obtenerUsuario) {
+    //     return router.push('/login');
+    // }
 
     const { nombre, apellido } = data.obtenerUsuario
 
     const cerrarSesion = () => {
         localStorage.removeItem('token')
         router.push('/login')
+        client.clearStore();
     }
 
     return(

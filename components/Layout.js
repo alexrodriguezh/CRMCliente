@@ -4,6 +4,8 @@ import Sidebar from './Sidebar'
 import Header from './Header'
 import { useRouter } from 'next/router'
 
+import '../assets/style.css'
+
 const Layout = ({children}) => {
 
     // Hook de routing
@@ -14,7 +16,7 @@ const Layout = ({children}) => {
             <Head>
                 <title>CRM</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-                <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+                {/* <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" /> */}
             </Head>
 
             { router.pathname === '/login' || router.pathname === '/nuevacuenta' ? (
